@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Team details</h1>
+        <table border="1px">
+            <thead>
+                <tr>
+                    <td>Fullname</td>
+                    <td>Email</td>
+                    <td>Password</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in users %}
+                <tr>
+                    <td>{{i.fullname}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.password}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </center>
+</body>
+</html>

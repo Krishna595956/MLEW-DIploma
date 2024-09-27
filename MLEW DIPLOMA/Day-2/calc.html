@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    A:<input type="number" id="a">
+    B:<input type="number" id="b"><br><br>
+    <button id="add">Add</button>
+    <button id="sub">Sub</button>
+    <button id="div">Mul</button>
+    <button id="mul">Div</button>
+    <p id="result"></p>
+    <script>
+        let add=document.getElementById("add");
+        let sub=document.getElementById("sub");
+        let div=document.getElementById("div");
+        let mul=document.getElementById("mul");
+        let result=document.getElementById("result");
+        add.addEventListener("click",()=>{
+            let a=parseInt(document.getElementById("a").value);
+            let b=parseInt(document.getElementById("b").value);
+            result.innerText=a+b;
+        })
+        sub.addEventListener("click",()=>{
+            let a=parseInt(document.getElementById("a").value);
+            let b=parseInt(document.getElementById("b").value);
+            result.innerText=a-b;
+        })
+        mul.addEventListener("click",()=>{
+            let a=parseInt(document.getElementById("a").value);
+            let b=parseInt(document.getElementById("b").value);
+            result.innerText=a*b;
+        })
+        div.addEventListener("click",()=>{
+            let a=parseInt(document.getElementById("a").value);
+            let b=parseInt(document.getElementById("b").value);
+            result.innerText=a/b;
+        })
+
+    </script>
+</body>
+</html>

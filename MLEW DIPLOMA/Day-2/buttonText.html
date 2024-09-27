@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onmouseenter="mouseEnter()" onmouseleave="mouseLeft()" id="btn">Mouse left</button>
+    <script>
+
+        document.getElementById("btn").style.borderRadius="0px";
+        function mouseEnter(){
+            let a=document.getElementById("btn");
+            
+            a.style.backgroundColor="black";
+            document.getElementById("btn").style.color="white";
+            document.getElementById("btn").innerText="Mouse entered";
+            document.getElementById("btn").style.borderRadius="10px";
+        }
+        function mouseLeft(){
+            document.getElementById("btn").style.backgroundColor="white";
+            document.getElementById("btn").style.color="black";
+            document.getElementById("btn").innerText="Mouse left";
+            document.getElementById("btn").style.borderRadius="0px";
+        }
+    </script>
+</body>
+</html>

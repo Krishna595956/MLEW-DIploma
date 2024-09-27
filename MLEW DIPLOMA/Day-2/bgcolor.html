@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <h1>Hello</h1>
+    <button id="bt">Light mode</button>
+    <script>
+        let a=document.getElementById("bt");
+        let b=document.getElementById("body");
+        
+        a.addEventListener('click',function()
+                            {   
+                                let btnText=a.innerText;
+                                if(btnText==="Light mode"){
+                                    a.innerText="Dark mode";
+                                b.style.color="white";
+                                b.style.backgroundColor="black";
+                                }
+                                else{
+                                    a.innerText="Light mode";
+                                b.style.color="black";
+                                b.style.backgroundColor="white";
+                                }
+                                
+                            });
+    </script>
+</body>
+</html>

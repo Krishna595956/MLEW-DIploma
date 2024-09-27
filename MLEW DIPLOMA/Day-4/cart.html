@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table td{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Cart page</h1>
+        <table border="1px solid black">
+            <thead>
+                <tr>
+                    <td>S.no</td>
+                    <td>Item</td>
+                    <td>cost</td>
+                    <td>Items</td>
+                    <td>Total</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Item 1</td>
+                    <td><p id="cost1">100</p></td>
+                    <td><div style="display: flex;"><button onclick="decrement1()">-</button><p id="items1">0</p><button onclick="increment1()">+</button></div></td>
+                    <td><p id="total1">0</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+    <script>
+        function increment1(){
+            let a=document.getElementById("items1").innerText;
+            document.getElementById("items1").innerText=parseInt(a)+1;
+            var b=document.getElementById("items1").innerText;
+            var c=document.getElementById("cost1").innerText;
+            document.getElementById("total1").innerText=b*c;
+        }
+        function decrement1(){
+            let a=document.getElementById("items1").innerText;
+            if(a>0){
+            document.getElementById("items1").innerText=parseInt(a)-1;
+            var b=document.getElementById("items1").innerText;
+            var c=document.getElementById("cost1").innerText;
+            document.getElementById("total1").innerText=b*c;
+            }
+            
+        }
+    </script>
+</body>
+</html>
